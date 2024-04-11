@@ -1,17 +1,37 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-
+import Image from 'next/image'
+import logo from 'components/logo-slapi.png'
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+  logo: (
+  <>
+    <Image src={logo} alt="SLAPI Logo" width={24} height={24} />
+    <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
+        SLAPI
+      </span>
+  </>  
+  ),
+  // project: {
+  //   link: 'https://github.com/shuding/nextra-docs-template',
+  // },
+  // chat: {
+  //   link: 'https://discord.com',
+  // },
+  // docsRepositoryBase: 'https://github.com/nizarhaider/SLAPI-DOCS',
+  editLink:{
+    component: null
   },
-  chat: {
-    link: 'https://discord.com',
+  // logoLink: "https://github.com/nizarhaider/SLAPI-DOCS/blob/main/Untitled_design-8-removebg-preview.png",
+  feedback:{
+    content: null
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: (
+      <span>
+        SLAPI {new Date().getFullYear()} ©{''}
+        .
+      </span>
+    )
   },
 }
 

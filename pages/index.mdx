@@ -1,11 +1,68 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+The SLAPI Indicators API allows users to retrieve data on various economic and social metrics in Sri Lanka. At present, the API provides monthly data on inflation, land inflation, and tourist arrival numbers. However, the dataset is continuously expanding, and more frequent data will be added soon.
 
-## What is Nextra?
+## Base URL
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+The base URL for accessing the SLAPI Indicators API is:
 
-## Documentation
+```
+https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com
+```
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+## Usage
+
+To use the SLAPI Indicators API, follow these steps:
+
+1. **Determine the Data Collection**: Decide which data collection you want to retrieve data from. Currently available collections include:
+   - Inflation
+   - Land Inflation
+   - Tourist Arrivals
+
+2. **Construct the API Request**: Append the `collection_name` query parameter to the base URL to specify the desired data collection. For example:
+   ```
+   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators?collection_name=inflation
+   ```
+
+3. **Send the API Request**: Make a GET request to the constructed URL to retrieve the data.
+
+## Example
+
+For example, to retrieve data on inflation, you can make the following API request:
+
+```
+   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators?collection_name=inflation
+```
+
+The response will contain an array of objects, each representing an indicator with its corresponding value and date.
+```
+[
+  {
+    "Inflation": 131.7,
+    "date": "2022-01-01"
+  },
+  {
+    "Inflation": 132.9,
+    "date": "2022-02-01"
+  },
+  {
+    "Inflation": 137.3,
+    "date": "2022-03-01"
+  },
+  {
+    "Inflation": 151.7,
+    "date": "2022-04-01"
+  }
+]
+```
+## Data Sources
+
+The data provided by the SLAPI Indicators API is sourced from reliable sources, including:
+- Ministry of Tourism
+- Central Bank of Sri Lanka (CBSL)
+
+## Contribution
+
+Contributions to the SLAPI Indicators API are welcome! If you have additional data sources or suggestions for improving the API, please feel free to open an issue or submit a pull request.
+
+## Contact
+
+If you have any questions, feedback, or need assistance, please contact us at [nizarhaider@gmail.com](mailto:nizarhaider@gmail.com).

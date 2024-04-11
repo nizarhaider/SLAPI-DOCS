@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "slapi-docs",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Economic and Social indicators",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": ""
   },
   "author": "Shu Ding <g@shud.in>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://dsacademy.lk"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "",
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "latest",
