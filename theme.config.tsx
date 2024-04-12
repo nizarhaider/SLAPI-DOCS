@@ -18,6 +18,11 @@ const config: DocsThemeConfig = {
       <meta property="og:description" content="Sri Lankan data indicators" />
     </>
   ),
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – SLAPI',
+    };
+  },
   // project: {
   //   link: 'https://github.com/shuding/nextra-docs-template',
   // },
