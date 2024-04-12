@@ -22,8 +22,7 @@ const config: DocsThemeConfig = {
   ),
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – SLAPI',
-      title: 'SLAPI'
+      titleTemplate: '%s – SLAPI'
     };
   },
   // project: {
