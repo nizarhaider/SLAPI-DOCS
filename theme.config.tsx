@@ -2,7 +2,9 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 import Image from 'next/image'
 import logo from 'components/logo-slapi.png'
-const config: DocsThemeConfig = {
+
+
+const config: DocsThemeConfig = { 
   logo: (
   <>
     <Image src={logo} alt="SLAPI Logo" width={24} height={24} />
@@ -21,6 +23,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     return {
       titleTemplate: '%s – SLAPI',
+      title: 'SLAPI'
     };
   },
   // project: {
