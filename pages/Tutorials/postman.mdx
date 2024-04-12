@@ -1,0 +1,53 @@
+## Using SLAPI with Postman
+
+In this tutorial, we'll learn how to use the SLAPI Indicators API in Postman, a popular API testing and development tool. We'll cover the steps to make requests to the API endpoints and handle responses within the Postman environment.
+
+### Step 1: Install Postman
+
+If you haven't already installed Postman, you can download it from the official website: [Postman Download Page](https://www.postman.com/downloads/).
+
+### Step 2: Set Environment Variables
+
+1. Open Postman.
+2. Click on the gear icon in the top-right corner to open the "Manage Environments" window.
+3. Click on "Add" to create a new environment.
+4. Name your environment (e.g., SLAPI Environment).
+5. Add variables for the base URL and any authentication tokens required for your API.
+   - For example:
+     - base_url: `https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators`
+     - collection_name: `str`.
+     - date: `%Y-%m-%d`
+6. Click "Add" to save the environment.
+
+### Step 3: Make API Requests
+
+![Local Image](pages/postman-tut.png)
+
+
+1. In the Postman workspace, click on the "+" icon to create a new request.
+2. Choose the appropriate HTTP method (GET, POST, etc.).
+3. Enter the API endpoint URL. You can use the base URL along with the endpoint path and any necessary query parameters.
+4. If necessary, fill in any required parameters in the request (e.g., `collection_name`, `date`).
+5. Ensure the correct environment is selected from the top-right dropdown menu.
+6. Click the "Send" button to make the API request.
+
+
+### Step 4: Handle Responses
+
+![Local Image](pages/postman-tut-2.png)
+
+1. After sending the request, you'll see the response in the main panel below.
+2. Check the response status code to ensure the request was successful.
+3. Review the response body to see the data returned by the API.
+4. Use Postman's features to format, save, or export the response data as needed.
+
+### Step 5: Test Other Endpoints
+
+Repeat steps 3 and 4 to test other endpoints provided by the SLAPI Indicators API. Explore different requests and parameters to retrieve the desired data from the API.
+Here are some examples:
+- collection_name
+    - inflation
+    - land_inflation
+    - tourists
+- date
+    - %Y-%m-%d

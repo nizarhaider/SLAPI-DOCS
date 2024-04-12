@@ -1,0 +1,78 @@
+## Using SLAPI with Python
+
+In this tutorial, we'll learn how to use the SLAPI (Sri Lanka API) to access economic and social indicators data from Sri Lanka using the Python Requests library.
+
+### Step 1: Get Requests Library
+
+If you haven't already installed the Requests library, you can do so using pip:
+
+```bash
+pip install requests
+```
+
+Import the package
+
+```
+import requests
+```
+### Step 2: Make API Requests
+
+First, set the base URL
+
+```
+base_url = "https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators"
+```
+
+Now, construct the API request URL for the desired endpoint. For example, to retrieve data for the "inflation" collection:
+
+```
+collection_name = "inflation"
+date = "2022-01-01"  # Specify the date for filtering
+url = f"{base_url}?collection_name={collection_name}&date={date}"
+
+```
+
+Then, make a GET request to the API endpoint:
+
+```
+response = requests.get(url)
+```
+
+### Step 3: Handle the Response
+
+Check the status code of the response to ensure the request was successful. If successful, handle the response data accordingly:
+
+```
+if response.status_code == 200:
+    data = response.json()
+    print("Data retrieved successfully:")
+    print(data)
+else:
+    print("Failed to retrieve data. Status code:", response.status_code)
+```
+
+Your output should look something like:
+```
+Data retrieved successfully: 
+[
+    {
+    “Inflation”: 131.7,
+    “date”: “2022-01-01”
+    },
+    {
+    “Inflation”: 132.9,
+    “date”: “2022-02-01”
+    },
+    {
+    “Inflation”: 137.3,
+    “date”: “2022-03-01”
+    },
+    {
+    “Inflation”: 151.7,
+    “date”: “2022-04-01”
+    }
+]
+```
+
+
+

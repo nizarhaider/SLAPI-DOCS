@@ -21,6 +21,9 @@ const config: DocsThemeConfig = {
   editLink:{
     component: null
   },
+  feedback: {
+    content: "Got an issue? Let me know"
+    },
   // logoLink: "https://github.com/nizarhaider/SLAPI-DOCS/blob/main/Untitled_design-8-removebg-preview.png",
   // feedback:{
   //   content: null
