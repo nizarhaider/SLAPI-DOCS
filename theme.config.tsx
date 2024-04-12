@@ -17,19 +17,18 @@ const config: DocsThemeConfig = {
   // chat: {
   //   link: 'https://discord.com',
   // },
-  // docsRepositoryBase: 'https://github.com/nizarhaider/SLAPI-DOCS',
+  docsRepositoryBase: 'https://github.com/nizarhaider/SLAPI-DOCS',
   editLink:{
     component: null
   },
   // logoLink: "https://github.com/nizarhaider/SLAPI-DOCS/blob/main/Untitled_design-8-removebg-preview.png",
-  feedback:{
-    content: null
-  },
+  // feedback:{
+  //   content: null
+  // },
   footer: {
     text: (
       <span>
         SLAPI {new Date().getFullYear()} ©{''}
-        .
       </span>
     )
   },

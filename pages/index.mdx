@@ -17,9 +17,9 @@ To use the SLAPI Indicators API, follow these steps:
    - Land Inflation
    - Tourist Arrivals
 
-2. **Construct the API Request**: Append the `collection_name` query parameter to the base URL to specify the desired data collection. For example:
+2. **Construct the API Request**: Append the `collection_name` query parameter to the base URL to specify the desired data collection. Additionally, include the `date` parameter to filter data based on a specific date. For example:
    ```
-   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators?collection_name=inflation
+   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators?collection_name=inflatio&date=2022-01-01
    ```
 
 3. **Send the API Request**: Make a GET request to the constructed URL to retrieve the data.
@@ -29,7 +29,9 @@ To use the SLAPI Indicators API, follow these steps:
 For example, to retrieve data on inflation, you can make the following API request:
 
 ```
-   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators?collection_name=inflation
+   https://yugprc1adf.execute-api.ap-southeast-1.amazonaws.com/slapi_indicators
+   ?collection_name=inflation
+   &date=2022-01-01
 ```
 
 The response will contain an array of objects, each representing an indicator with its corresponding value and date.
